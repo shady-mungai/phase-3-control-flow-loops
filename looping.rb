@@ -1,3 +1,4 @@
+require 'pry'
 def happy_new_year
   num = 11
   until num == 1
@@ -36,15 +37,19 @@ end
   end
 end
 
-def reverse_string(input_string)
-  result = ""
-  i = input_string.length
-  while i >= 0
-    result << input_string[i] 
-    i += 1
-  end
-  result
+def reverse_string(str)
+  output = ""
+  output = str.split("")
+  p output.reverse.join("")
+end
+
+reverse_string("Hello")
+
+
+def name
+  name = "Steven"
+ puts "Hi, #{name}" unless name == "Steven"
 end
 
 
-
+binding.pry
